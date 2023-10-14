@@ -14,8 +14,8 @@ resource "docker_image" "server_image" {
 
 # Create a container
 resource "docker_container" "server" {
-  image             = docker_image.server_image.image_id
-  name              = var.server_name
+  image = docker_image.server_image.image_id
+  name  = var.server_name
   env = [
     "EULA=TRUE"
   ]
